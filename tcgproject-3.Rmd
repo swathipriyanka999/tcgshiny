@@ -1,0 +1,35 @@
+```{r}
+library(ggplot2)
+tcgproject <-read.csv("USA Births.csv",encoding="UTF-8")
+print(tcgproject)
+'
+ggplot(tcgproject,aes(year,births))+geom_point(shape=1)+geom_smooth(method=lm)
+data(Project)
+fit1 <- lm(births~year,data=tcgproject)
+summary(fit1)
+plot(births~year, data=tcgproject)
+abline(fit1)'
+
+'models'
+
+ggplot(tcgproject,aes(month,births))+geom_point(shape=1)+geom_smooth(method=lm)
+data(Project)
+fit1 <- lm(month~births,data=tcgproject)
+summary(fit1)
+
+
+ggplot(tcgproject,aes(date_of_month,births))+geom_point(shape=1)+geom_smooth(method=lm)
+data(Project)
+fit1 <- lm(date_of_month~births,data=tcgproject)
+summary(fit1)
+
+
+ggplot(tcgproject,aes(day_of_week,births))+geom_point(shape=1)+geom_smooth(method=lm)
+data(Project)
+fit1 <- lm(day_of_week~births,data=tcgproject)
+summary(fit1)
+
+
+```
+```
+
